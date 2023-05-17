@@ -1,0 +1,95 @@
+.preview {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    padding-bottom: 20px;
+}
+
+.preview:hover {
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+.preview-category {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+    color: orange;
+}
+
+.category:hover {
+    color: blue;
+}
+
+.preview .preview-content {
+    width: calc(100% - 25px);
+    margin: auto;
+    height: 150px;
+    overflow: hidden;
+}
+
+.preview-content .preview-content-info {
+    width: calc(100% - 170px);
+    float: right;
+}
+
+.preview-content img {
+    width: 150px;
+    height: 120px;
+    float: left;
+    margin: 15px 0px 0px 0px;
+}
+
+.preview-byline {
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.preview-summary {
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding: 10px 0px 5px;
+}
+
+.mini-preview {
+    width: 350px;
+    height: 150px;
+}
+
+.mini-preview .preview-section {
+    width: calc(100% - 130px);
+    height: 150px;
+    float: left;
+}
+
+.mini-preview-image {
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
+.preview-section a.category-link {
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    padding-left: 10px;
+    height: 25px;
+}
+
+.preview-section a.preview-title {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+.preview-section a.preview-title:hover {
+    color: red;
+}
+
+.preview-title p {
+    padding: 10px;
+}

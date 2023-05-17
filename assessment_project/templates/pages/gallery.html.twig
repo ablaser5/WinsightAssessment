@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block main %}
+<section class="gallery-wrapper"> 
+    <h1 class="gallery-title">{{category|upper}}</h1>
+    <section class="gallery">
+        <div class="column">
+            {% for node in featured %}
+                {% include 'components/preview.html.twig' with {'node': node } %}
+            {% endfor %}
+        </div>
+        <div class="column">
+            {% for node in articles %}
+                {% include 'components/preview.html.twig' with {'node': node } %}
+            {% endfor %}
+        </div>
+    </section>
+</section>
+{% endblock %}

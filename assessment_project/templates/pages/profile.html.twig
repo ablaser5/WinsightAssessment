@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block main %} 
+    <section class="profile-section">
+        <div class="picture">
+            {% if profile.image %}
+                <img src="{{profile.image}}">
+            {% endif %}
+        </div>
+        <div class="main-profile">
+            <h1>{{ profile.title }}</h1>
+            <h3>{{ profile.job }}</h3>
+            <p>{{ profile.summary|raw }}</p>
+        </div>
+        <h2 class="about">About</h2>
+        <div class="profile-body">
+            {{ profile.value|raw }}
+        </div>
+    </section>
+{% endblock %}

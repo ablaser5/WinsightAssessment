@@ -1,0 +1,38 @@
+{% extends './pages/post.html.twig' %}
+
+{% block left_sidebar %}
+
+{% endblock %}
+
+{% block content %}
+
+    <header>
+        {% include 'components/category.html.twig' with {'category': node.field_section_rb.name, 'category_uri': node.field_section_rb.uri } %}
+        <h1 class="title">{{ node.title }}</h1>
+        <p class="summary">{{ node.body.summary }}</p>
+        {% include 'components/byline.html.twig' %}
+    </header>
+    <figure>
+        {% if node.field_image_main %} 
+            <img src="{{ node.field_image_main.field_image_background.uri }}" alt="Article Image">
+            <figcaption>{{ node.field_image_main.field_image_credit }}</figcaption>
+        {% else %}
+            <img src="https://picsum.photos/300/600" alt="Article Image">
+        {% endif %}
+    </figure>
+    <section>
+        <p>{{ node.body.value|raw }}</p>
+    </section>
+    <footer>
+    </footer>
+    
+{% endblock %}
+
+{% block right_sidebar %}
+    {% if articles|length > 0 %}
+        <h1 class="more-topic">MORE ON THIS TOPIC</h1>
+    {% endif %}
+    {% for article in articles %}
+        {% include 'components/mini_preview.html.twig' with {'node': article} %}
+    {% endfor %}
+{% endblock %}

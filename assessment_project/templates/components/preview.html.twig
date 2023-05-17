@@ -1,0 +1,17 @@
+<section class="preview" article-uri="{{ node.uri }}">
+    {% include 'components/category.html.twig' with {'category':node.category, 'category_uri': node.category_uri} %}
+    <h1 class="preview-title">{{ node.title }}</h1>
+    <div class="preview-content">
+        {% if node.image %}
+            <img src="{{ node.image }}" alt="preview image">
+        {% else %}
+            <img src="https://picsum.photos/200/300" alt="preview image"> 
+        {% endif %}
+        <div class="preview-content-info">
+            <p class="preview-byline">
+                {% include 'components/byline.html.twig' %}
+            </p>
+            <p class="preview-summary">{{ node.summary }}</p>
+        </div>
+    </div>
+</section>

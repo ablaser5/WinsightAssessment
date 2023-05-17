@@ -1,0 +1,13 @@
+<section class="mini-preview">
+    <div class="preview-section">
+        {% include 'components/category.html.twig' with {'category':node.category, 'category_uri': node.category_uri} %}
+        <a class="preview-title" href="{{ node.uri }}">
+            <p>{{ node.title }}</p>
+        </a>
+    </div>
+    {% if node.image %}
+        <img class="mini-preview-image" src="{{ node.image }}" alt="mini-image">
+    {% else %}
+        <img class="mini-preview-image" src="https://picsum.photos/200/300" alt="mini-image">
+    {% endif %}
+</section>

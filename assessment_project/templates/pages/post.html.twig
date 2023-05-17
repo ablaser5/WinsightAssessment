@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block main %} 
+    <section class="main-section">
+        <aside class="left-sidebar">
+            {% block left_sidebar %} {% endblock %}
+        </aside>
+        <article>
+            {% block content %} {% endblock %}
+        </article>
+        <aside class="right-sidebar">
+            {% block right_sidebar %} {% endblock %}
+        </aside>
+    </section>
+{% endblock %}

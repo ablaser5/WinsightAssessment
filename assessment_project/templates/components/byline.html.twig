@@ -1,0 +1,5 @@
+By: 
+{% for author in node.authors %}
+    <a class="byline-link" href="{{ author.uri }}">{{ author.title }}</a>
+{% endfor %}
+on {{node.date}}
